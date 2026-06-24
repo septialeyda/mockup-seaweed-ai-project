@@ -3,6 +3,7 @@ import { Target, Eye, Database, Microscope, ChevronRight, Menu, X, Landmark } fr
 
 export default function SeaweedMockup() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSubscribeOpen, setIsSubscribeOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 font-sans antialiased">
@@ -14,13 +15,13 @@ export default function SeaweedMockup() {
           {/* Logo Area */}
           <div className="flex items-center space-x-3">
             {/* The actual visual logo placeholder */}
-            <div className="bg-emerald-600 p-2 rounded-lg text-white">
+            <div className="flex items-center justify-center">
               <img src="/logo.png" alt="Seaweed Company Logo" className="h-6 w-6" />
             </div>
             {/* The required wording */}
             <div>
               <span className="text-xl font-bold tracking-tight text-slate-950 block">SEAWEED</span>
-              <span className="text-xs tracking-widest font-semibold text-emerald-600 block -mt-1">CENTRAL</span>
+              <span className="text-xs tracking-widest font-semibold text-emerald-600 block -mt-1">AI PROJECT</span>
             </div>
           </div>
           
@@ -86,6 +87,13 @@ export default function SeaweedMockup() {
             <h2 className="text-xs font-bold tracking-widest text-emerald-600 uppercase mb-2">Our Findings</h2>
             <p className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">The Seaweed Discovery Pipeline</p>
             <p className="text-slate-500 mt-2 text-sm sm:text-base">Rigorous collection and taxonomical charting across dynamic coastlines.</p>
+            <button
+              type="button"
+              onClick={() => setIsSubscribeOpen(true)}
+              className="mt-4 inline-flex items-center font-semibold text-emerald-700 hover:text-emerald-800 underline underline-offset-4"
+            >
+              Antioxidant report
+            </button>
           </div>
           
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y lg:divide-y-0 lg:divide-x divide-slate-100">
@@ -131,7 +139,7 @@ export default function SeaweedMockup() {
           </div>
           <div className="bg-slate-900 rounded-2xl h-80 lg:h-[450px] overflow-hidden relative shadow-lg">
             <img 
-              src="https://images.unsplash.com/photo-1583244532610-2a234e7c3eca?q=80&w=2070" 
+              src="/workspaces/mockup-seaweed-ai-project/seaweed-web/src/assets/about_us.jpeg"
               alt="Marine Laboratory Research" 
               className="w-full h-full object-cover opacity-80"
             />
@@ -202,11 +210,42 @@ export default function SeaweedMockup() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center space-x-3">
             <Database className="h-5 w-5 text-emerald-600" />
-            <span className="font-bold text-slate-900 tracking-tight">SEAWEED CENTRAL MOCKUP</span>
+            <span className="font-bold text-slate-900 tracking-tight">SEAWEED AI PROJECT MOCKUP</span>
           </div>
           <p>© {new Date().getFullYear()} Seaweed Company. Inspired by Seaweed Central UI/UX. All rights reserved.</p>
         </div>
       </footer>
+
+      {isSubscribeOpen && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-slate-900/60 px-4">
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="subscribe-title"
+            className="w-full max-w-sm rounded-2xl bg-white p-6 shadow-2xl"
+          >
+            <div className="flex items-center justify-between">
+              <h3 id="subscribe-title" className="text-xl font-bold text-slate-900">Subscribe</h3>
+              <button
+                type="button"
+                onClick={() => setIsSubscribeOpen(false)}
+                className="rounded-md p-1 text-slate-500 hover:bg-slate-100 hover:text-slate-700"
+                aria-label="Close subscribe popup"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+            <p className="mt-3 text-sm text-slate-600">Subscribe</p>
+            <button
+              type="button"
+              onClick={() => setIsSubscribeOpen(false)}
+              className="mt-6 w-full rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-emerald-700"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
 
     </div>
   );
