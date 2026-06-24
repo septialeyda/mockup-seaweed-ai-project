@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Target, Eye, Database, Microscope, ChevronRight, Menu, X, Landmark } from 'lucide-react';
+import aboutUsImage from './assets/about_us.jpeg';
 
 export default function SeaweedMockup() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +17,7 @@ export default function SeaweedMockup() {
           <div className="flex items-center space-x-3">
             {/* The actual visual logo placeholder */}
             <div className="flex items-center justify-center">
-              <img src="/logo.png" alt="Seaweed Company Logo" className="h-6 w-6" />
+              <img src="/logo.png" alt="Seaweed Company Logo" className="h-8 w-auto object-contain" />
             </div>
             {/* The required wording */}
             <div>
@@ -139,7 +140,7 @@ export default function SeaweedMockup() {
           </div>
           <div className="bg-slate-900 rounded-2xl h-80 lg:h-[450px] overflow-hidden relative shadow-lg">
             <img 
-              src="/workspaces/mockup-seaweed-ai-project/seaweed-web/src/assets/about_us.jpeg"
+              src={aboutUsImage}
               alt="Marine Laboratory Research" 
               className="w-full h-full object-cover opacity-80"
             />
