@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, Target, Eye, Database, Microscope, ChevronRight, Menu, X, Landmark } from 'lucide-react';
+import { Target, Eye, Database, Microscope, ChevronRight, Menu, X, Landmark } from 'lucide-react';
 
 export default function SeaweedMockup() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,10 +10,14 @@ export default function SeaweedMockup() {
       {/* HEADER & NAVIGATION */}
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+          
+          {/* Logo Area */}
           <div className="flex items-center space-x-3">
+            {/* The actual visual logo placeholder */}
             <div className="bg-emerald-600 p-2 rounded-lg text-white">
-              <Database className="h-6 w-6" />
+              <img src="/logo.png" alt="Seaweed Company Logo" className="h-6 w-6" />
             </div>
+            {/* The required wording */}
             <div>
               <span className="text-xl font-bold tracking-tight text-slate-950 block">SEAWEED</span>
               <span className="text-xs tracking-widest font-semibold text-emerald-600 block -mt-1">CENTRAL</span>
