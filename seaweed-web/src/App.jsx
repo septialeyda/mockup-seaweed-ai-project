@@ -160,9 +160,24 @@ export default function SeaweedMockup() {
                   <Target className="h-8 w-8" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-                <p className="text-slate-300 leading-relaxed">
-                  To ethically harvest and thoroughly research the extensive taxonomies of seaweed, establishing a globally recognized bio-bank repository that powers the next generation of sustainable, ocean-derived industrial applications.
-                </p>
+                <ol className="space-y-4 text-slate-300 leading-relaxed list-decimal list-inside">
+                  <li>
+                    <span className="font-semibold text-white">Fostering a vibrant marine bioresource community anchored in academic institutions and citizen marine scientists:</span>
+                    <span className="ml-2">Connecting researchers, students, and experts worldwide to share knowledge, drive collaborative projects, and cultivate the next generation of ocean innovators.</span>
+                  </li>
+                  <li>
+                    <span className="font-semibold text-white">Establishing leading laboratory for advancing product development and technological breakthrough:</span>
+                    <span className="ml-2">Pioneering extractions, formulation, methods, and technologies that transform seaweed and marine biomass into innovative, market-ready products, emphasizing efficiency, scalability, and environmental integrity.</span>
+                  </li>
+                  <li>
+                    <span className="font-semibold text-white">Building a comprehensive seaweed and marine library as a dynamic data backend:</span>
+                    <span className="ml-2">Creating an accessible, data-rich repository that serves as the core engine for retrieving, analyzing, and disseminating information on marine bioresources, empowering users with real-time insights and tools for decision-making.</span>
+                  </li>
+                  <li>
+                    <span className="font-semibold text-white">Building sustainable marine supply chains while addressing climate change challenges:</span>
+                    <span className="ml-2">Map and optimizing marine supply chains for transparency and resilience while integrating climate science to mitigate impacts, promote adaptive strategies, and ensure that bioresource utilization contributes to global climate</span>
+                  </li>
+                </ol>
               </div>
             </div>
 
@@ -174,7 +189,21 @@ export default function SeaweedMockup() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
                 <p className="text-slate-300 leading-relaxed">
-                  To become the world's most definitive platform for marine macroalgae research, enabling a circular economy where high-value macroalgae solutions substitute petrochemical dependencies on a global scale.
+                  We are building a global ocean bioresource database for the marine biotech economy, beginning in Indonesia and the Coral Triangle in South East Asia.
+                </p>
+                <p className="mt-4 text-slate-300 leading-relaxed">
+                  Rooted in ocean based resources and stewardship, our platform advances three core pillars:
+                </p>
+                <ul className="mt-4 space-y-2 text-slate-300 leading-relaxed list-disc list-inside">
+                  <li>marine exploration, discovery and bioremediation</li>
+                  <li>research and development to convert marine biomass into high-value products and new materials</li>
+                  <li>building cutting-edge technology for the purposes of monitoring, reporting and verification of real time data.</li>
+                </ul>
+                <p className="mt-4 text-slate-300 leading-relaxed">
+                  We champion the vision of a circular and regenerative economy by active bioremediation processes while unlocking value from ocean-based resources.
+                </p>
+                <p className="mt-4 text-slate-300 leading-relaxed">
+                  We envision the ocean not just as a resource, but as a vital ally in forging a resilient, blue-green future.
                 </p>
               </div>
             </div>
